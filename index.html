@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Yahtzee Scorecard</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        display: flex;
+        overflow-y: hidden;
+        overflow-x: scroll;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border: 1px solid black;
+        border-top: none;
+        border-bottom: none;
+      }
+
+      button {
+        margin-top: 50vh;
+        transform: translateY(-50%);
+        padding: 5em 5em;
+        height: fit-content;
+      }
+
+      input {
+        font-size: large;
+        text-align: center;
+      }
+
+      iframe {
+        height: 100vh;
+        scale: 90%;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const newCard = () => {
+        const body = document.querySelector("body");
+        const card = document.createElement("div");
+        const name = document.createElement("input");
+        const frame = document.createElement("iframe");
+
+        name.type = "text";
+        name.placeholder = "Player Name";
+        frame.src = "./card.html";
+        frame.frameBorder = "0";
+
+        card.appendChild(name);
+        card.appendChild(frame);
+        body.insertBefore(card, document.querySelector("button"));
+      };
+      newCard();
+    </script>
+    <button onclick="newCard()">+</button>
+  </body>
+</html>

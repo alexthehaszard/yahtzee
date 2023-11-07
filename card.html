@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yahtzee Scorecard</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td colspan="2">Upper Section</td>
+      </tr>
+      <tr>
+        <td>Aces</td>
+        <td>
+          <input step="1" value="0" min="0" max="5" type="number" />
+          <button onclick="zap(this)">X</button>
+        </td>
+      </tr>
+      <tr>
+        <td>Twos</td>
+        <td>
+          <input step="2" value="0" min="0" max="10" type="number" />
+          <button onclick="zap(this)">X</button>
+        </td>
+      </tr>
+      <tr>
+        <td>Threes</td>
+        <td>
+          <input step="3" value="0" min="0" max="15" type="number" />
+          <button onclick="zap(this)">X</button>
+        </td>
+      </tr>
+      <tr>
+        <td>Fours</td>
+        <td>
+          <input step="4" value="0" min="0" max="20" type="number" />
+          <button onclick="zap(this)">X</button>
+        </td>
+      </tr>
+      <tr>
+        <td>Fives</td>
+        <td>
+          <input step="5" value="0" min="0" max="25" type="number" />
+          <button onclick="zap(this)">X</button>
+        </td>
+      </tr>
+      <tr>
+        <td>Sixes</td>
+        <td>
+          <input step="6" value="0" min="0" max="30" type="number" />
+          <button onclick="zap(this)">X</button>
+        </td>
+      </tr>
+      <tr>
+        <td>Bonus</td>
+        <td>
+          <input id="b" value="0" disabled type="number" />
+        </td>
+      </tr>
+      <tr>
+        <td>Total Upper</td>
+        <td>
+          <input id="tu" value="0" disabled type="number" />
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">Lower Section</td>
+      </tr>
+      <tr>
+        <td>3 of a Kind</td>
+        <td>
+          <input type="number" />
+          <button onclick="zap(this)">X</button>
+        </td>
+      </tr>
+      <tr>
+        <td>4 of a Kind</td>
+        <td>
+          <input type="number" />
+          <button onclick="zap(this)">X</button>
+        </td>
+      </tr>
+      <tr>
+        <td>Full House</td>
+        <td>
+          <input value="0" disabled class="fh" type="number" />
+          <button onclick="zap(this)">X</button>
+          <input id="fh" type="checkbox" />
+        </td>
+      </tr>
+      <tr>
+        <td>Small Straight</td>
+        <td>
+          <input value="0" disabled class="ss" type="number" />
+          <button onclick="zap(this)">X</button>
+          <input id="ss" type="checkbox" />
+        </td>
+      </tr>
+      <tr>
+        <td>Long Straight</td>
+        <td>
+          <input value="0" disabled class="ls" type="number" />
+          <button onclick="zap(this)">X</button>
+          <input id="ls" type="checkbox" />
+        </td>
+      </tr>
+      <tr>
+        <td>Yahtzee</td>
+        <td>
+          <input value="0" disabled class="yh" type="number" />
+          <button onclick="zap(this)">X</button>
+          <input id="yh" type="checkbox" />
+        </td>
+      </tr>
+      <tr>
+        <td>Chance</td>
+        <td>
+          <input type="number" />
+        </td>
+      </tr>
+      <tr>
+        <td>Yahtzee Bonus</td>
+        <td>
+          <input id="yb1" type="checkbox" />
+          <input id="yb2" type="checkbox" />
+          <input id="yb3" type="checkbox" />
+        </td>
+      </tr>
+      <tr>
+        <td>Total Lower</td>
+        <td>
+          <input value="0" id="tl" disabled type="number" />
+        </td>
+      </tr>
+      <tr>
+        <td>Grand Total</td>
+        <td>
+          <input value="0" id="gt" disabled type="number" />
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

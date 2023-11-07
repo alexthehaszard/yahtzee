@@ -1,0 +1,61 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  border: 3px solid black;
+  border-radius: 2em;
+}
+
+td {
+  position: relative;
+}
+
+button {
+  right: 0;
+}
+
+td,
+th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+tr:nth-child(8),
+tr:nth-child(10),
+tr:nth-child(11),
+tr:nth-child(19) {
+  border-top: 2px solid black;
+}
+
+input[type="number"] {
+  width: 5em;
+}
+
+input[disabled] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+input[type="checkbox"] {
+  scale: 150%;
+}
+
+.zap:after {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 2px;
+  background: #000;
+  content: "";
+  width: 100%;
+  display: block;
+}
